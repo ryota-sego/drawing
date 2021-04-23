@@ -1,3 +1,27 @@
+企画書：
+
+何ができるのか
+    ┣━マウスで絵を描ける。
+    ┣━描いた絵をローカルに保存できる。
+    ┣━会員登録すると、描いた絵はデータベースに保存ができる。
+    ┣━会員登録すると、保存した絵を呼び出し、一覧表示させることができる。
+    ┗━会員登録すると、サイト内の共有ページに投稿ができる
+    
+誰がターゲットなのか(誰に使ってほしいか)
+    ┣━簡単な絵を描きたい人
+    ┣━絵を共有したい人
+    ┗━ちょっとしたメモ書きがしたい人
+    
+サイト名(仮称で構わない)
+    ┗━mini_draw
+
+
+
+
+
+
+
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
 <p align="center">
