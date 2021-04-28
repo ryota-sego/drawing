@@ -20,6 +20,7 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'icon',
     ];
 
     /**
@@ -40,4 +41,24 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+    
+    //コメント関連
+    
+    public function comments()
+    {
+        return $this->hasMany('Comment');
+    }
+    
+    //イラスト関連
+    
+    public function illusts()
+    {
+        return $this->hasMany('Illust');
+    }
+    
+    //お気に入り関連
+    
+    public function favorited_illusts(){
+        return $this->belongsToMany(User::class, 'favorites', 'user_id', 'illust_id')->withTimestamps();
+    }
 }
