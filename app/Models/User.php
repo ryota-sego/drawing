@@ -42,6 +42,8 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
     
+    
+    
     //コメント関連
     
     public function comments()
