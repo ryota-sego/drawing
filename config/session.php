@@ -156,7 +156,9 @@ return [
     */
 
     'domain' => env('SESSION_DOMAIN', null),
-
+    // API認証用
+    // 'domain' => '.domain.com',
+    
     /*
     |--------------------------------------------------------------------------
     | HTTPS Only Cookies

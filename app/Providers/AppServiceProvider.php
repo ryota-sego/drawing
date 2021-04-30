@@ -4,6 +4,11 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
+// 追加(Sanctum)
+use App\Models\Sanctum\PersonalAccessToken;
+use Laravel\Sanctum\Sanctum;
+
+
 class AppServiceProvider extends ServiceProvider
 {
     /**
@@ -24,5 +29,7 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         \URL::forceScheme('https');
+        // 追加(Sanctum)
+        Sanctum::usePersonalAccessTokenModel(PersonalAccessToken::class);
     }
 }

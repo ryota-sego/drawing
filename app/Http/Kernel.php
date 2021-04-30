@@ -4,6 +4,8 @@ namespace App\Http;
 
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
 
+use Laravel\Sanctum\Http\Middleware\EnsureFrontendRequestsAreStateful;
+
 class Kernel extends HttpKernel
 {
     /**
@@ -37,9 +39,14 @@ class Kernel extends HttpKernel
             \Illuminate\View\Middleware\ShareErrorsFromSession::class,
             \App\Http\Middleware\VerifyCsrfToken::class,
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
+            
+            // jsからのアピ利用 https://laravel.com/docs/8.x/passport#consuming-your-api-with-javascript Consuming Your API With JavaScript
+            // \Laravel\Passport\Http\Middleware\CreateFreshApiToken::class,
         ],
-
+            
         'api' => [
+            //Sanctum 利用用のAPI
+            \Laravel\Sanctum\Http\Middleware\EnsureFrontendRequestsAreStateful::class,
             'throttle:api',
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
         ],

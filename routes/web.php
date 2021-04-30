@@ -13,9 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/{any}', function () {
-    return view('welcome');
-})->where('any', '.*');
+// Routing　は基本的にこっちで行う。
+
+
+Route::get('/test', function () {
+    return view('home');
+});
 
 Auth::routes();
 
